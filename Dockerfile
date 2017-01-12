@@ -6,3 +6,7 @@ RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv && \
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 RUN git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+RUN apt-get update && \
+    apt-get install -y openjdk-7-jre-headless && \
+    apt-get clean
